@@ -35,7 +35,7 @@ export const client = new CognitoIdentityProviderClient({
     secretAccessKey: configs.awsSecretAccessKey,
   },
 });
-
+// dfghjkl;hjkl
 // Class auth for handle all logic of auth
 class AuthService {
   // To generate the SECRET_AUTH
