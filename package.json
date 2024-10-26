@@ -1,0 +1,19 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "start": "concurrently \"yarn workspace dashboard-react dev\" \"yarn workspace client-next dev\" \"yarn workspace api-gateway dev\" \"yarn workspace auth-service dev\" \"yarn workspace product-service dev\"",
+    "start:front": "concurrently \"yarn workspace dashboard-react dev\" \"yarn workspace client-next dev\"",
+    "start:backend": "concurrently \"yarn workspace api-proxy dev\" \"yarn workspace auth-service dev\""
+  },
+  "workspaces": [
+    "apps/*",
+    "apps/backend/*"
+  ],
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
