@@ -1,11 +1,19 @@
-import app from "@/src/app";
 import configs from "@/src/config";
 
-function run() {
-  app.listen(configs.port, () => {
-    console.log(`==================== API Gateway ====================`)
-    console.log(`API Geteway Service running on http://localhost:${configs.port}`);
-  });
+import app from "@/src/app"
+import createLogger from "@/src/utils/logger";
+
+export const gatewayLogger = createLogger({ service: 'api-gateway', level: 'info', logGroupName: configs.awsCloudwatchLogsGroupName });
+
+async function run() {
+  try {
+    app.listen(configs.port, () => {
+      console.log(`Gateway Service running on Port:`, configs.port)
+    })
+  } catch (error) {
+    console.error("Failed to start the application:", error);
+    process.exit(1);
+  }
 }
 
 run();

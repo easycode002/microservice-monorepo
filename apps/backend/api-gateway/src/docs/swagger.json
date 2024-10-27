@@ -58,6 +58,9 @@
 						}
 					}
 				},
+				"tags": [
+					"API Gateway"
+				],
 				"security": [],
 				"parameters": []
 			}

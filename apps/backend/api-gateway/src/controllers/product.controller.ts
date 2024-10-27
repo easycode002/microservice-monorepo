@@ -1,4 +1,4 @@
-import { Controller, Route, Get } from "tsoa";
+import { Controller, Route, Get, Tags } from "tsoa";
 
 export interface IItem {
   name: string;
@@ -6,6 +6,7 @@ export interface IItem {
   price: number;
 }
 
+@Tags('API Gateway')
 @Route("/v1/products")
 export class ProductController extends Controller {
   @Get("/")
