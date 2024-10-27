@@ -3,7 +3,7 @@
 ### Improve api-proxy
 
 <details>
-
+<summary>Improve api-proxy</summary>
 ##### Define the CORS options.
 ```sh
 import configs from "@/src/config";
