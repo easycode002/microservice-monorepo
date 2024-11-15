@@ -1,6 +1,7 @@
 import sendResponse from "@/src/utils/sent-responst";
-import { Controller, Get, Route } from "tsoa";
+import { Controller, Get, Route, Tags } from "tsoa";
 
+@Tags("Health API")
 @Route('v1/auth')
 export class HealthController extends Controller {
   @Get("/health")

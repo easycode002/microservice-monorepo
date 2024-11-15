@@ -1,10 +1,10 @@
 export interface SignupRequest {
-  first_name?: string;
+  sur_name?: string;
   last_name?: string;
   email?: string;
   phone_number?: string;
   password?: string;
-  role?: "supperadmin" | "admin" | "user";
+  role?: "admin" | "user";
 }
 
 // Interface descript infor of verify user

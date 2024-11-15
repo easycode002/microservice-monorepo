@@ -17,12 +17,12 @@ const models: TsoaRoute.Models = {
     "SignupRequest": {
         "dataType": "refObject",
         "properties": {
-            "first_name": {"dataType":"string"},
+            "sur_name": {"dataType":"string"},
             "last_name": {"dataType":"string"},
             "email": {"dataType":"string"},
             "phone_number": {"dataType":"string"},
             "password": {"dataType":"string"},
-            "role": {"dataType":"union","subSchemas":[{"dataType":"enum","enums":["supperadmin"]},{"dataType":"enum","enums":["admin"]},{"dataType":"enum","enums":["user"]}]},
+            "role": {"dataType":"union","subSchemas":[{"dataType":"enum","enums":["admin"]},{"dataType":"enum","enums":["user"]}]},
         },
         "additionalProperties": false,
     },

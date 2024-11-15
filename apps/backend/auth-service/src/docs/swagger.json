@@ -9,7 +9,7 @@
 		"schemas": {
 			"SignupRequest": {
 				"properties": {
-					"first_name": {
+					"sur_name": {
 						"type": "string"
 					},
 					"last_name": {
@@ -27,7 +27,6 @@
 					"role": {
 						"type": "string",
 						"enum": [
-							"supperadmin",
 							"admin",
 							"user"
 						]
@@ -119,6 +118,9 @@
 						}
 					}
 				},
+				"tags": [
+					"Health API"
+				],
 				"security": [],
 				"parameters": []
 			}
@@ -147,7 +149,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [],
@@ -189,7 +191,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [],
@@ -231,7 +233,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [],
@@ -275,7 +277,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [
@@ -299,7 +301,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": []
@@ -314,7 +316,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [
@@ -371,7 +373,7 @@
 					}
 				},
 				"tags": [
-					"Auth service"
+					"Auth Service"
 				],
 				"security": [],
 				"parameters": [],

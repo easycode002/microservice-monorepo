@@ -1,22 +1,20 @@
-import { Body, Controller, Get, Post, Queries, Query, Request, Route, SuccessResponse, Tags } from "tsoa";
-import { SignupRequest } from "@/src/services/types/auth-service.type";
-import AuthService from "@/src/services/auth.service";
-import sendResponse from "@/src/utils/sent-responst";
-import { GoogleCallbackRequest, LoginRequest, VerifyUserRequest } from "@easycode002/ms-libss";
-import setCookie from "@/src/utils/cookies";
-import { Response,Request as ExpressRequest } from "express";
 import configs from "@/src/config";
+import { GoogleCallbackRequest, LoginRequest, SignupRequest, VerifyUserRequest } from "@/src/controllers/types/auth-request.type";
+import AuthService from "@/src/services/auth.service";
+import setCookie from "@/src/utils/cookies";
+import sendResponse from "@/src/utils/sent-responst";
+import { Response, Request as ExpressRequest } from "express";
+import { Body, Controller, Get, Post, Queries, Query, Request, Route, SuccessResponse, Tags } from "tsoa";
 
-@Tags("Auth service")
-@Route("v1/auth")
+@Tags("Auth Service")
+@Route('v1/auth')
 export class AuthController extends Controller {
   @Post("/signup")
-  public async signup(
-    @Body() body: SignupRequest
-  ): Promise<{ message: string }> {
+  public async signup(@Body() body: SignupRequest): Promise<{ message: string }> {
     try {
-      const result = await AuthService.signup(body);
-      return sendResponse({ message: result });
+      const result = await AuthService.signup(body)
+      console.log("hello")
+      return sendResponse({ message: result })
     } catch (error) {
       throw error;
     }
@@ -105,4 +103,3 @@ export class AuthController extends Controller {
     }
   }
 }
-export default new AuthController();
